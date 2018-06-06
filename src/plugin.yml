@@ -1,0 +1,7 @@
+name: CustomEnchant
+main: org.raidwars.customenchants.Main
+version: 1.0
+author: Rages
+commands:
+  customenchant:
+    aliases: [enchants, ce]

@@ -1,0 +1,33 @@
+enchantment-shop: '&2&lEnchantment Shop'
+cost-lore: '&aCost &8» &c%levels% Levels'
+crystal-name: '&2Enchanted Crystal'
+not-enought-xp: '&cYou do not have enough XP for this!' 
+
+###############################################################
+# | ____|  _ __     ___  | |__     __ _   _ __   | |_   ___   #
+# |  _|   | '_ \   / __| | '_ \   / _` | | '_ \  | __| / __|  #
+# | |___  | | | | | (__  | | | | | (_| | | | | | | |_  \__ \  #
+# |_____| |_| |_|  \___| |_| |_|  \__,_| |_| |_|  \__| |___/  #
+###############################################################
+
+STRENGTH:
+  display: '&c&lStrength &8&l(&e&l30 XP&8&l)'
+  levels: 30
+SPEED:
+  display: '&c&lSpeed &8&l(&e&l30 XP&8&l)'
+  levels: 30
+FIRE_RESISTANCE:
+  display: '&c&lFire Resistance &8&l(&e&l30 XP&8&l)'
+  levels: 30
+HEALTH_BOOST:
+  display: '&c&lHealth Boost &8&l(&e&l30 XP&8&l)'
+  levels: 30
+REGENERATION:
+  display: '&c&lRegeneration &8&l(&e&l30 XP&8&l)'
+  levels: 30
+WATER_BREATHING:
+  display: '&c&lWater Breathing &8&l(&e&l30 XP&8&l)'
+  levels: 30
+SATURATION:
+  display: '&c&lSaturation &8&l(&e&l30 XP&8&l)'
+  levels: 30
