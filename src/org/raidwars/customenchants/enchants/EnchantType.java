@@ -9,14 +9,11 @@ import com.google.common.collect.ImmutableSet;
 
 public enum EnchantType {
 
-	STRENGTH(ChatColor.GRAY + "Strength II", ImmutableSet.of(Material.DIAMOND_LEGGINGS, Material.DIAMOND_CHESTPLATE), new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 100000, 1)),
-	SPEED(ChatColor.GRAY + "Speed II", ImmutableSet.of(Material.DIAMOND_BOOTS), new PotionEffect(PotionEffectType.SPEED, 100000, 1)),
-	FIRE_RESISTANCE(ChatColor.GRAY + "Fire Resistance I", ImmutableSet.of(Material.DIAMOND_LEGGINGS, Material.DIAMOND_CHESTPLATE), new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 100000, 0)),
-	WATER_BREATHING(ChatColor.GRAY + "Water Breathing I", ImmutableSet.of(Material.DIAMOND_HELMET), new PotionEffect(PotionEffectType.WATER_BREATHING, 100000, 0)),
-	REGENERATION(ChatColor.GRAY + "Regeneration I", ImmutableSet.of(Material.DIAMOND_LEGGINGS, Material.DIAMOND_CHESTPLATE), new PotionEffect(PotionEffectType.REGENERATION, 100000, 0)),
-	SATURATION(ChatColor.GRAY + "Saturation I", ImmutableSet.of(Material.DIAMOND_HELMET), new PotionEffect(PotionEffectType.SATURATION, 100000, 5)),
-	HEALTH_BOOST(ChatColor.GRAY + "Health Boost I", ImmutableSet.of(Material.DIAMOND_LEGGINGS, Material.DIAMOND_CHESTPLATE), new PotionEffect(PotionEffectType.HEALTH_BOOST, 100000, 1));
-//	HEALTHBOOST(ChatColor.GRAY + "Health Boost I", ImmutableSet.of(Material.DIAMOND_LEGGINGS, Material.DIAMOND_CHESTPLATE), new PotionEffect(PotionEffectType.HEALTH_BOOST, 100000, 1)),
+	STRENGTH(ChatColor.GRAY + "Strength II", ImmutableSet.of(Material.DIAMOND_LEGGINGS, Material.DIAMOND_CHESTPLATE), new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE, 1)),
+	SPEED(ChatColor.GRAY + "Speed II", ImmutableSet.of(Material.DIAMOND_BOOTS), new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1)),
+	FIRE_RESISTANCE(ChatColor.GRAY + "Fire Resistance I", ImmutableSet.of(Material.DIAMOND_LEGGINGS, Material.DIAMOND_CHESTPLATE), new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Integer.MAX_VALUE, 0)),
+	WATER_BREATHING(ChatColor.GRAY + "Water Breathing I", ImmutableSet.of(Material.DIAMOND_HELMET), new PotionEffect(PotionEffectType.WATER_BREATHING, Integer.MAX_VALUE, 0)),
+	SATURATION(ChatColor.GRAY + "Saturation I", ImmutableSet.of(Material.DIAMOND_HELMET), new PotionEffect(PotionEffectType.SATURATION, Integer.MAX_VALUE, 5));
 
 	String name;
 	ImmutableSet<Material> items;

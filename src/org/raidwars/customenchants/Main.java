@@ -7,12 +7,17 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.raidwars.customenchants.armor.ArmorListener;
 import org.raidwars.customenchants.enchants.EnchantType;
+import org.raidwars.customenchants.listeners.EnchantmentListener;
+import org.raidwars.customenchants.listeners.InventoryClickListener;
 
 public class Main extends JavaPlugin {
 
@@ -20,7 +25,9 @@ public class Main extends JavaPlugin {
 
 	public void onEnable() {
 		(Main.instance = this).saveDefaultConfig();
-		getServer().getPluginManager().registerEvents(new MainListener(this), this);
+		getServer().getPluginManager().registerEvents(new EnchantmentListener(this), this);
+		getServer().getPluginManager().registerEvents(new InventoryClickListener(this), this);
+		getServer().getPluginManager().registerEvents((Listener)new ArmorListener(), (Plugin)this);
 	}
 
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -38,13 +45,11 @@ public class Main extends JavaPlugin {
 	}
 
 	public void addItems(Inventory gui) {
-		gui.setItem(10, ItemUtils.getShowCase(EnchantType.SPEED));
-		gui.setItem(11, ItemUtils.getShowCase(EnchantType.STRENGTH));
-		gui.setItem(12, ItemUtils.getShowCase(EnchantType.FIRE_RESISTANCE));
-		gui.setItem(13, ItemUtils.getShowCase(EnchantType.HEALTH_BOOST));
-		gui.setItem(14, ItemUtils.getShowCase(EnchantType.REGENERATION));
-		gui.setItem(15, ItemUtils.getShowCase(EnchantType.WATER_BREATHING));
-		gui.setItem(16, ItemUtils.getShowCase(EnchantType.SATURATION));
+		gui.setItem(11, ItemUtils.getShowCase(EnchantType.SPEED));
+		gui.setItem(12, ItemUtils.getShowCase(EnchantType.STRENGTH));
+		gui.setItem(13, ItemUtils.getShowCase(EnchantType.FIRE_RESISTANCE));
+		gui.setItem(14, ItemUtils.getShowCase(EnchantType.WATER_BREATHING));
+		gui.setItem(15, ItemUtils.getShowCase(EnchantType.SATURATION));
 	}
 	
 	private ItemStack getBlankItem() {
